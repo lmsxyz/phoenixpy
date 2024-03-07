@@ -12,7 +12,7 @@ class PlaceLimitOrderArgs(typing.TypedDict):
     order_packet: types.order_packet.OrderPacketKind
 
 
-layout = borsh.CStruct("order_packet" / types.order_packet.layout)
+layout = borsh.CStruct("order_packet" / types.order_packet.layout).compile()
 
 
 class PlaceLimitOrderAccounts(typing.TypedDict):
